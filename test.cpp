@@ -58,6 +58,23 @@ TEST(StudentSecondSession, GetAverage3){
 }
 
 
+TEST(Student, GetAverageFromUniversity){
+  int arr[6] = {1,4,5,6,2,0};
+  vector<Student*> university;
+  StudentSecondSession s1 ("Galya", 32, 32457385783, 244292, arr);
+  StudentSecondSession s2 ("Galya", 32, 32457385783, 244292, arr);
+  StudentSecondSession s3 ("Galya", 32, 32457385783, 244292, arr);
+  StudentSecondSession s4 ("Galya", 32, 32457385783, 244292, arr);
+  StudentSecondSession s5 ("Galya", 32, 32457385783, 244292, arr);
+  university.push_back(&s1);
+  university.push_back(&s2);
+  university.push_back(&s3);
+  university.push_back(&s4);
+  university.push_back(&s5);
+  ASSERT_EQ(university.getAverageFromUniversity(), 3);
+}
+
+
 
 
 
